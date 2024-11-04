@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-image: url('data:image/jpeg;base64,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.jpg'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Diabetes Prediction</h1>
+        <form id="predictionForm">
+            <label for="glucose">Glucose Level:</label>
+            <input type="number" id="glucose" required>
+            <label for="bloodPressure">Blood Pressure:</label>
+            <input type="number" id="bloodPressure" required>
+            <label for="age">Age:</label>
+            <input type="number" id="age" required>
+            <button type="submit">Predict</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
